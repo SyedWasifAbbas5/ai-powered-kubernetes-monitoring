@@ -1,0 +1,12 @@
+{
+  "incident": "APPLICATION_DEGRADATION",
+  "severity": "HIGH",
+  "cause": "Elevated request latency combined with increased application errors",
+  "actions": [
+    "kubectl get pods -n ai-monitoring",
+    "kubectl describe pods -n ai-monitoring",
+    "kubectl logs -n ai-monitoring -l app=ai-monitoring-app --tail=100",
+    "Check recent application deployments and configuration changes",
+    "Inspect Prometheus and Grafana metrics for continued degradation"
+  ]
+}
